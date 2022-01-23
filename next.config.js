@@ -8,6 +8,12 @@ module.exports = {
         destination: '/api/get/:path*',
         permanent: true,
       },
+      {
+        source: '/gh/:repo/:commit',
+        destination: 'https://github.com/cascandaliato/:repo/commit/:commit',
+        permanent: false,
+      },
+
     ]
   },
 }
