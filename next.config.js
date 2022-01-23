@@ -4,9 +4,9 @@ module.exports = {
   async redirects() {
     return [
       {
-        source: '/get/:path*',
-        destination: '/api/get/:path*',
-        permanent: true,
+        source: '/get/:file/:password',
+        destination: `${process.env.SECRETS_API_PROJECT_URL}/api/get?password=:password&file=:file`,
+        permanent: false,
       },
       {
         source: '/gh/:repo/:commit',
